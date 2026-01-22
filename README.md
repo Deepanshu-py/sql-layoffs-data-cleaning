@@ -1,13 +1,13 @@
 # SQL Layoffs Data Cleaning Project
 
-## 📌 Project Overview
+##  Project Overview
 This project focuses on cleaning a real-world layoffs dataset using **MySQL**.  
 The goal is to prepare raw data for analysis by removing duplicates, fixing
 inconsistencies, handling NULL values, and formatting dates properly.
 
 ---
 
-## 🛠 Tools Used
+##  Tools Used
 - MySQL
 - SQL (Window Functions, CTEs)
 
@@ -19,7 +19,7 @@ inconsistencies, handling NULL values, and formatting dates properly.
 
 ---
 
-## 🧹 Data Cleaning Steps
+## Data Cleaning Steps
 
 ### 1. Create Staging Tables
 - Copied raw data into staging tables to avoid modifying original data.
@@ -44,7 +44,7 @@ inconsistencies, handling NULL values, and formatting dates properly.
 
 ---
 
-## ✅ Result
+##  Result
 A clean and consistent dataset ready for analysis and visualization.
 
 ---

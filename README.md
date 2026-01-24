@@ -76,7 +76,7 @@ After cleaning and analysis, the dataset is consistent, structured, and ready fo
 ---
 
 ## How to Use
-1. Import `data/layoffs.csv` into MySQL as the `layoffs` table
+1. Import `layoffs.csv` into MySQL as the `layoffs` table
 2. Run `layoffs_data_cleaning.sql` to clean the data
 3. Run `eda_queries.sql` to perform exploratory analysis
 

@@ -1,53 +1,86 @@
-# SQL Layoffs Data Cleaning Project
+# SQL Layoffs Data Cleaning and EDA Project
 
-##  Project Overview
-This project focuses on cleaning a real-world layoffs dataset using **MySQL**.  
-The goal is to prepare raw data for analysis by removing duplicates, fixing
-inconsistencies, handling NULL values, and formatting dates properly.
+## Project Overview
+This project focuses on cleaning and exploring a real-world layoffs dataset using **MySQL**.
+The objective is to transform raw data into a clean, consistent format and then perform
+**exploratory data analysis (EDA)** to identify trends and patterns.
+
+This project follows a realistic data workflow:
+**Raw Data → Data Cleaning → Exploratory Analysis**
 
 ---
 
-##  Tools Used
+## Tools Used
 - MySQL
-- SQL (Window Functions, CTEs)
+- SQL (CTEs, Window Functions, Aggregations)
 
 ---
 
-## 📂 Project Files
-- `layoffs_data_cleaning.sql` → SQL script used for data cleaning  
-- `data/layoffs.csv` (or similar) → Raw layoffs dataset  
+## Dataset
+The dataset contains information about company layoffs, including:
+- Company name
+- Location
+- Industry
+- Total and percentage of layoffs
+- Date of layoff
+- Company stage
+- Country
+- Funds raised
+
+The raw dataset is available in the `data/layoffs.csv` file.
 
 ---
 
-## Data Cleaning Steps
+## Project Structure
+sql-layoffs-data-cleaning/
+│
+├── README.md
+├── layoffs_data_cleaning.sql -- SQL queries for data cleaning
+├── eda_queries.sql -- SQL queries for exploratory data analysis
+└── layoffs.csv -- raw dataset
 
-### 1. Create Staging Tables
-- Copied raw data into staging tables to avoid modifying original data.
-
-### 2. Remove Duplicates
-- Used `ROW_NUMBER()` with `PARTITION BY`
-- Removed duplicate rows safely using a second staging table.
-
-### 3. Standardize Data
-- Trimmed company names
-- Standardized industry names (e.g., crypto)
-- Standardized country names
-- Converted date column to proper `DATE` format.
-
-### 4. Handle NULL and Blank Values
-- Replaced blank industries with NULL
-- Filled missing industry values using self joins
-- Removed rows with no layoff information.
-
-### 5. Remove Unnecessary Columns
-- Dropped helper columns used during cleaning.
 
 ---
 
-##  Result
-A clean and consistent dataset ready for analysis and visualization.
+## Data Cleaning
+The data cleaning process is implemented in `layoffs_data_cleaning.sql` and includes:
+
+- Creating staging tables to preserve raw data
+- Removing duplicate records using `ROW_NUMBER()`
+- Standardizing company names, industries, and countries
+- Converting date column to proper `DATE` format
+- Handling NULL and blank values
+- Removing unnecessary helper columns
 
 ---
 
-## 👤 Author
+## Exploratory Data Analysis (EDA)
+EDA is performed in `eda_queries.sql` to explore patterns and trends such as:
+
+- Companies with the highest layoffs
+- Industries and countries most affected
+- Layoffs by company stage
+- Yearly and monthly layoff trends
+- Companies with 100% layoffs
+- Rolling total of layoffs over time
+- Top 5 companies by layoffs each year
+
+---
+
+## Results
+After cleaning and analysis, the dataset is consistent, structured, and ready for:
+- Business analysis
+- Data visualization (Power BI / Tableau)
+- Further statistical or machine learning work
+
+---
+
+## How to Use
+1. Import `data/layoffs.csv` into MySQL as the `layoffs` table
+2. Run `layoffs_data_cleaning.sql` to clean the data
+3. Run `eda_queries.sql` to perform exploratory analysis
+
+---
+
+## Author
 **Deepanshu**

@@ -84,3 +84,6 @@ After cleaning and analysis, the dataset is consistent, structured, and ready fo
 
 ## Author
 **Deepanshu**
+This project is part of my SQL portfolio for data analyst roles.
+
+
